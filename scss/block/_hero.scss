@@ -1,5 +1,4 @@
-.wrapper {
-}
+@use "../mixins" as m;
 .pokemon-img {
   margin: 0 auto;
   padding-top: 50px;
@@ -8,6 +7,7 @@
 .form-box {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 50px;
   margin-bottom: 30px;
 }
@@ -160,29 +160,97 @@
   margin-bottom: 15px;
 }
 .list__height {
-  font-size: 18px;
   font-weight: bold;
   color: rgba(10, 27, 18, 0.611);
 }
 .list__weight {
-  font-size: 18px;
   font-weight: bold;
   color: rgba(10, 27, 18, 0.611);
 }
 .list__eggs {
-  font-size: 18px;
   font-weight: bold;
   color: rgba(10, 27, 18, 0.611);
 }
 .list__spawn-time {
-  font-size: 18px;
   font-weight: bold;
   color: rgba(10, 27, 18, 0.611);
 }
 .list__weaknesses {
   margin: 0;
-  font-size: 16px;
   font-weight: 600;
   color: rgba(10, 27, 18, 0.611);
   text-align: center;
+}
+// media started
+@include m.media (280px) {
+  .pokemon-img {
+    max-width: 700px;
+    width: 100%;
+  }
+  .form-box {
+    justify-content: center;
+    gap: 20px;
+  }
+  .btn-box {
+    display: flex;
+    justify-content: center;
+  }
+  .list {
+    justify-content: center;
+  }
+  .item {
+    padding: 10px;
+  }
+  .list__height {
+    font-size: 14px;
+  }
+  .list__weight {
+    font-size: 14px;
+  }
+  .list__eggs {
+    font-size: 13px;
+  }
+  .list__spawn-time {
+    font-size: 13px;
+  }
+  .list__weaknesses {
+    font-size: 12px;
+  }
+}
+@include m.media (376px) {
+  .list__height {
+    font-size: 16px;
+  }
+  .list__weight {
+    font-size: 16px;
+  }
+  .list__eggs {
+    font-size: 15px;
+  }
+  .list__spawn-time {
+    font-size: 15px;
+  }
+  .list__weaknesses {
+    font-size: 14px;
+  }
+}
+@include m.media (768px) {
+  .item {
+    padding: 14px;
+  }
+  .list__height {
+    font-size: 17px;
+  }
+  .list__weight {
+    font-size: 17px;
+  }
+  .list__eggs {
+    font-size: 17px;
+  }
+  .list__spawn-time {
+    font-size: 17px;
+  }
+  .list__weaknesses {
+    font-size: 16px;
+  }
 }
