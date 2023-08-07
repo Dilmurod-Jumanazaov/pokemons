@@ -1,0 +1,188 @@
+.wrapper {
+}
+.pokemon-img {
+  margin: 0 auto;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+.form-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.form-box__input-text {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(0, 9, 4, 0.712);;
+}
+.form-box__input-name {
+  max-width: 270px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.3;
+  color: rgb(12, 149, 142);
+}
+.form-box__input-name::placeholder {
+  color: rgb(12, 149, 142);
+}
+.form-box__input-weight {
+  max-width: 270px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.3;
+  color: rgb(12, 149, 142);
+}
+.form-box__input-weight::placeholder {
+  color: rgb(12, 149, 142);
+}
+.form-box__input-height {
+  max-width: 270px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.3;
+  color: rgb(12, 149, 142);
+}
+.form-box__input-height::placeholder {
+  color: rgb(12, 149, 142);
+}
+.form-box__input-eggs {
+  max-width: 270px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.3;
+  color: rgb(12, 149, 142);
+}
+.form-box__input-eggs::placeholder {
+  color: rgb(12, 149, 142);
+}
+.form-box__input-ID {
+  max-width: 270px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.3;
+  color: rgb(12, 149, 142);
+}
+.form-box__input-ID::placeholder {
+  color: rgb(12, 149, 142);
+}
+.form-box__btn {
+  max-width: 120px;
+  width: 100%;
+  margin-bottom: 60px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.3;
+  color: rgb(59, 167, 162);
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  gap: 20px;
+}
+.item {
+  max-width: 314px;
+  width: 100%;
+  height: 100%;
+  padding: 13px;
+  border: 3px solid white;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.381);
+  transition: box-shadow 0.3s ease;
+}
+.item:hover {
+  box-shadow: 0 0 10px 10px rgb(101, 146, 134);
+  cursor: pointer;
+}
+.list__pok-id {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+.list__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+.list__img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.list__weight-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.list__eggs-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.list__height {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(10, 27, 18, 0.611);
+}
+.list__weight {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(10, 27, 18, 0.611);
+}
+.list__eggs {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(10, 27, 18, 0.611);
+}
+.list__spawn-time {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(10, 27, 18, 0.611);
+}
+.list__weaknesses {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(10, 27, 18, 0.611);
+  text-align: center;
+}

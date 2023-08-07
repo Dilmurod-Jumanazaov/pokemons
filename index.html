@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="./css/main.css"> -->
+  <link rel="stylesheet" href="./css/main.min.css">
+  <title>Pokemons</title> 
+</head>
+<body>
+  <section class="hero">
+    <div class="container">
+      <img class="pokemon-img" src="./images/pokemnologo.png" alt="pokemons logo">
+      <form class="form-box" autocomplete="off">
+        <div class="form-box__input-wrap">
+          <p class="form-box__input-text">
+            Pokemons name
+          </p>
+          <input class="form-box__input-name" type="text" name="user_name_search" placeholder="Name search">
+        </div>
+        <div class="form-box__input-wrap">
+          <p class="form-box__input-text">
+            Pokemons Weight
+          </p>
+          <input class="form-box__input-weight" type="text" name="user_weight_search" placeholder="Weight search">
+        </div>
+        <div class="form-box__input-wrap">
+          <p class="form-box__input-text">
+            Pokemons Height
+          </p>
+          <input class="form-box__input-height" type="text" name="user_height_search" placeholder="Height search">
+        </div>
+        <div class="form-box__input-wrap">
+          <p class="form-box__input-text">
+            Pokemons Eggs
+          </p>
+          <input class="form-box__input-eggs" type="text" name="user_eggs_search" placeholder="Eggs search">
+        </div>
+        <div class="form-box__input-wrap">
+          <p class="form-box__input-text">
+            Pokemons ID
+          </p>
+          <input class="form-box__input-ID" type="text" name="user_weaknesses_search" placeholder="ID search">
+        </div>
+      </form>
+      <button class="form-box__btn" type="submit">Submit</button>
+      <ul class="list">
+      </ul>
+    </div>
+  </section>
+  
+  <script src="./js/pokemons.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
