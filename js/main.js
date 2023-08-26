@@ -6,6 +6,8 @@ const elInputHeight = elForm.querySelector(".form-box__input-height");
 const elInputEggs = elForm.querySelector(".form-box__input-eggs");
 const elInputID = elForm.querySelector(".form-box__input-ID");
 const elList = document.querySelector(".list");
+const modalTitle = document.querySelector(".modal-title");
+const modalDesc = document.querySelector(".modal-body");
 
 // bu yerda render pokemons funktsiyasi pokemonlarni ekranga chiqarib chizib beryabdi.
 renderPokemons(pokemons);
@@ -24,6 +26,10 @@ function renderPokemons(arr) {
     let spawnElement = document.createElement("time");
     let weaknessesElement = document.createElement("p");
     let IDelement = document.createElement("span");
+    const modalBtn = document.createElement("button");
+    modalBtn.setAttribute("data-bs-toggle","modal");
+    modalBtn.setAttribute("data-bs-target","#exampleModal");
+    modalBtn.type = "button";
     // bu yerda yaratilgan elementlarga class qoshilyabdi.
     liElement.classList.add("item");
     titleElement.classList.add("list__title");
@@ -36,6 +42,8 @@ function renderPokemons(arr) {
     spawnElement.classList.add("list__spawn-time");
     weaknessesElement.classList.add("list__weaknesses");
     IDelement.classList.add("list__pok-id");
+    modalBtn.classList.add("btn","modal-btn");
+    modalBtn.dataset.id = item.id;
     // bu yerda yaratilgan elementlarning textcontentiga pokemons arrayning ichidagi ma'lumotlar o'zlashtirilyabdi. 
     titleElement.textContent = item.name;
     imgElement.setAttribute("src",item.img);
@@ -47,10 +55,11 @@ function renderPokemons(arr) {
     spawnElement.setAttribute("datetime","2023-08-07");
     weaknessesElement.textContent = item.weaknesses;
     IDelement.textContent = `ID: ${item.id}`;
+    modalBtn.textContent = "More info";
     // bu joyda elementlar bir biriga append(qoshilyabdi) qilinyabdi.
     topWrapper.append(heightElement,weightElement);
     bottomWrapper.append(egssElement,spawnElement);
-    liElement.append(IDelement,titleElement,imgElement,topWrapper,bottomWrapper,weaknessesElement);
+    liElement.append(IDelement,titleElement,imgElement,topWrapper,bottomWrapper,weaknessesElement,modalBtn);
     elList.appendChild(liElement);
   })
 }
@@ -119,6 +128,15 @@ elInputID.addEventListener("keyup", function() {
   // bu yerda renderPokemons() function filter qilingan pokemonni ekranga chiqarib beryabdi.
   renderPokemons(filterID);
 });
+elList.addEventListener("click", (evt) => {
+  if(evt.target.matches(".modal-btn")) {
+    const modalBtnId = evt.target.dataset.id;
+    console.log(modalBtnId);
+    const findElemant = pokemons.find((item) => item.id == modalBtnId)
+    modalTitle.textContent = findElemant.name;
+    modalDesc.textContent = findElemant.weaknesses;
+  }
+})
 
 
 
